@@ -6,9 +6,9 @@ pipeline {
                 echo 'Hello all'
             }
         }
-        stage('dev stage') {
+        stage('master stage') {
             when {
-                branch 'dev'
+                branch 'master'
             }
             steps {
                 echo 'hello dev'
