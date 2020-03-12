@@ -1,14 +1,14 @@
 pipeline {
     agent none
     stages {
-        stage('feature') {
+        stage('master stage') {
             agent any
             steps {
-                echo "feature"
+                echo "master"
                 
         }
     },
-    stage('dev') {
+    stage('dev stage') {
             agent any
             steps {
                 echo "dev"
