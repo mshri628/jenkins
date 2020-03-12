@@ -1,25 +1,22 @@
 pipeline {
-    agent none
+    agent any
     stages {
-        stage('master stage') 
-            agent any
+             stage('master stage') {
             when {
                 branch 'master'
             }
             steps {
-                echo "master"
-                
-        }
-    }
-    stage('dev stage') {
-            agent any
-        
+                echo 'master'
+            }
+        } 
+        stage('dev stage') {
             when {
                 branch 'dev'
             }
             steps {
-                echo "dev"
-                
+                echo 'Dev'
+            }
+        }  
         }
     }
 }
